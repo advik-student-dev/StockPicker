@@ -3,8 +3,8 @@ import requests
 
 
 
-def getprice(stock):
-    url = "https://www.google.com/finance/quote/"+ stock.upper() + ":NASDAQ?hl=en"
+def getprice(stock, exchange):
+    url = "https://www.google.com/finance/quote/"+ stock.upper() + ":" + exchange.upper() + "?hl=en"
     HTML = requests.get(
         url,
         headers={
@@ -17,5 +17,6 @@ def getprice(stock):
 
 if __name__ == "__main__":
     stock = input("Which stock: ")
-    price = getprice(stock)
+    exchange = input("Which exchange: ")
+    price = getprice(stock, exchange)
     print(price)
