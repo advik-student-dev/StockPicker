@@ -1,2 +1,7 @@
-BeautifulSoup
+bs4
+requests
+selenium
+pandas
+numpy
+yfinance
 
